@@ -3,7 +3,8 @@ import java.util.ArrayList;
 public class Store {
 
 	ArrayList<Employee> employees = new ArrayList<Employee>();
-	Manager manager;
+	Manager manager = new Manager("Bruce");
+	
 	
 	public static void main(String[] args) {
 		Store s = new Store();
@@ -28,14 +29,14 @@ public class Store {
 		//Notice I am using different constructors for Employees
 		employees.add(new Employee("Tom"));
 		employees.add(new Employee("Jane", 40000));
-		
+		employees.add(new Employee("Bruce", 100000));
 		/*
 		 * This add statement will not work until the Manager class has been extended
 		 * However, I never set the manager correctly
 		 * 
 		 * TODO: assign the manager for the store class and add the manager to the employee list
 		 */
-		employees.add(new Manager("Tim", 50000, 5));
+		// employees.add(new Manager("Tim", 50000, 5));
 		
 		//Notice that I can put a manager inside a list of employees because Manager is a subclass of Employee.
 	}
